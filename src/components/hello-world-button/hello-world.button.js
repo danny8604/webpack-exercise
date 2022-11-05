@@ -1,6 +1,7 @@
-import "./hello-world-button.css";
+import "./hello-world-button.scss";
 
 class HelloWorldButton {
+  _buttonCssClass = "hello-world-button";
   render() {
     const button = document.createElement("button");
     button.innerHTML = "Hello world!!!!";
@@ -11,7 +12,7 @@ class HelloWorldButton {
   click() {
     const body = document.querySelector("body");
     const but = document.querySelector("button");
-    but.classList.add("hello-world-button");
+    but.classList.add(this._buttonCssClass);
     but.addEventListener("click", function () {
       const p = document.createElement("p");
       p.classList.add("hello-world-text");
